@@ -16,3 +16,15 @@ func twoSum(nums []int, target int) []int {
 	}
 	return nil
 }
+
+// it uses more memory, but more faster
+func twoSumFaster(nums []int, target int) []int {
+	values := make(map[int]int)
+	for i := 0; i < len(nums); i++ {
+		if pos, ok := values[target-nums[i]]; ok {
+			return []int{pos, i}
+		}
+		values[nums[i]] = i
+	}
+	return nil
+}
