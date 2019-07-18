@@ -1,5 +1,9 @@
 package numbers
 
+import (
+	"math"
+)
+
 // 509. Fibonacci Number
 // The Fibonacci numbers, commonly denoted F(n) form a sequence,
 // called the Fibonacci sequence, such that each number is the sum of the two preceding ones, starting from 0 and 1.
@@ -19,4 +23,10 @@ func fib(N int) int {
 		prev1, prev2 = prev2, res
 	}
 	return res
+}
+
+// Time Complexity: O(1)
+// Space Complexity: O(1)
+func fibFake(N int) int {
+	return int(math.Round(math.Pow(math.Phi, float64(N)) / math.Sqrt(5)))
 }
