@@ -13,8 +13,5 @@ func isPalindrome(x int) bool {
 		res = (res * 10) + last
 		x /= 10
 	}
-	if a == res {
-		return true
-	}
-	return false
+	return a == res
 }

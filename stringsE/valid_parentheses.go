@@ -32,10 +32,7 @@ func isValid(s string) bool {
 			}
 		}
 	}
-	if a.IsEmpty() {
-		return true
-	}
-	return false
+	return a.IsEmpty()
 }
 
 type Stack struct {
