@@ -32,10 +32,15 @@ func TestLemonadeChange(t *testing.T) {
 			input: []int{5, 5, 10, 10, 20},
 			want:  false,
 		},
+		{
+			name:  "Example 5",
+			input: []int{5, 5, 5, 10, 5, 5, 10, 20, 20, 20},
+			want:  false,
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got := lemonadeChange(tt.input)
+			got := lemonadeChangeFaster(tt.input)
 			require.Equal(t, tt.want, got)
 		})
 	}
