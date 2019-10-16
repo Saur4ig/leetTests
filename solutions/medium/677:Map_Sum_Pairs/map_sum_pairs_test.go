@@ -1,4 +1,4 @@
-package medium
+package _77_Map_Sum_Pairs
 
 import (
 	"testing"
