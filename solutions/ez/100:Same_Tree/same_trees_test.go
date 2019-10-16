@@ -1,41 +1,43 @@
-package trees
+package _00_Same_Tree
 
 import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
+
+	"github.com/Saur4ig/leetTests/trees"
 )
 
 func TestIsSameTree(t *testing.T) {
 	tests := []struct {
 		name   string
-		first  *TreeNode
-		second *TreeNode
+		first  *trees.TreeNode
+		second *trees.TreeNode
 		want   bool
 	}{
 		{
 			name: "Example 1",
-			first: &TreeNode{
+			first: &trees.TreeNode{
 				Val: 1,
-				Left: &TreeNode{
+				Left: &trees.TreeNode{
 					Val:   2,
 					Left:  nil,
 					Right: nil,
 				},
-				Right: &TreeNode{
+				Right: &trees.TreeNode{
 					Val:   3,
 					Left:  nil,
 					Right: nil,
 				},
 			},
-			second: &TreeNode{
+			second: &trees.TreeNode{
 				Val: 1,
-				Left: &TreeNode{
+				Left: &trees.TreeNode{
 					Val:   2,
 					Left:  nil,
 					Right: nil,
 				},
-				Right: &TreeNode{
+				Right: &trees.TreeNode{
 					Val:   3,
 					Left:  nil,
 					Right: nil,
@@ -45,19 +47,19 @@ func TestIsSameTree(t *testing.T) {
 		},
 		{
 			name: "Example 2",
-			first: &TreeNode{
+			first: &trees.TreeNode{
 				Val: 1,
-				Left: &TreeNode{
+				Left: &trees.TreeNode{
 					Val:   2,
 					Left:  nil,
 					Right: nil,
 				},
 				Right: nil,
 			},
-			second: &TreeNode{
+			second: &trees.TreeNode{
 				Val:  1,
 				Left: nil,
-				Right: &TreeNode{
+				Right: &trees.TreeNode{
 					Val:   2,
 					Left:  nil,
 					Right: nil,
@@ -67,27 +69,27 @@ func TestIsSameTree(t *testing.T) {
 		},
 		{
 			name: "Example 3",
-			first: &TreeNode{
+			first: &trees.TreeNode{
 				Val: 1,
-				Left: &TreeNode{
+				Left: &trees.TreeNode{
 					Val:   2,
 					Left:  nil,
 					Right: nil,
 				},
-				Right: &TreeNode{
+				Right: &trees.TreeNode{
 					Val:   1,
 					Left:  nil,
 					Right: nil,
 				},
 			},
-			second: &TreeNode{
+			second: &trees.TreeNode{
 				Val: 1,
-				Left: &TreeNode{
+				Left: &trees.TreeNode{
 					Val:   1,
 					Left:  nil,
 					Right: nil,
 				},
-				Right: &TreeNode{
+				Right: &trees.TreeNode{
 					Val:   2,
 					Left:  nil,
 					Right: nil,
