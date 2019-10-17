@@ -1,4 +1,4 @@
-package numbers
+package _58_Add_Digits
 
 import (
 	"testing"

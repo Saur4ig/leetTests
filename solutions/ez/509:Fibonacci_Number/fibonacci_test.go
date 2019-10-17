@@ -1,4 +1,4 @@
-package numbers
+package _09_Fibonacci_Number
 
 import (
 	"testing"
@@ -6,31 +6,31 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-func TestIsPalindrome(t *testing.T) {
+func TestFib(t *testing.T) {
 	tests := []struct {
 		name  string
 		input int
-		want  bool
+		want  int
 	}{
 		{
 			name:  "Example 1",
-			input: 121,
-			want:  true,
+			input: 2,
+			want:  1,
 		},
 		{
 			name:  "Example 2",
-			input: -121,
-			want:  false,
+			input: 3,
+			want:  2,
 		},
 		{
 			name:  "Example 3",
-			input: 10,
-			want:  false,
+			input: 4,
+			want:  3,
 		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got := isPalindrome(tt.input)
+			got := fib(tt.input)
 			require.Equal(t, tt.want, got)
 		})
 	}

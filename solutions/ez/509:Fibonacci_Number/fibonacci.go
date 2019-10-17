@@ -1,13 +1,9 @@
-package numbers
+package _09_Fibonacci_Number
 
 import (
 	"math"
 )
 
-// 509. Fibonacci Number
-// The Fibonacci numbers, commonly denoted F(n) form a sequence,
-// called the Fibonacci sequence, such that each number is the sum of the two preceding ones, starting from 0 and 1.
-// link - https://leetcode.com/problems/fibonacci-number/
 // Time Complexity: O(n)
 // Extra Space: O(1)
 func fib(N int) int {

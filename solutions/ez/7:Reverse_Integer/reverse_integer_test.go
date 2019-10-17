@@ -1,4 +1,4 @@
-package numbers
+package __Reverse_Integer
 
 import (
 	"testing"

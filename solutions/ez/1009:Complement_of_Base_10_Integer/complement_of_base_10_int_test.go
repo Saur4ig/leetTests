@@ -1,4 +1,4 @@
-package numbers
+package _009_Complement_of_Base_10_Integer
 
 import (
 	"testing"
@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-func TestFib(t *testing.T) {
+func TestBitwiseComplement(t *testing.T) {
 	tests := []struct {
 		name  string
 		input int
@@ -14,23 +14,23 @@ func TestFib(t *testing.T) {
 	}{
 		{
 			name:  "Example 1",
-			input: 2,
-			want:  1,
-		},
-		{
-			name:  "Example 2",
-			input: 3,
+			input: 5,
 			want:  2,
 		},
 		{
+			name:  "Example 2",
+			input: 7,
+			want:  0,
+		},
+		{
 			name:  "Example 3",
-			input: 4,
-			want:  3,
+			input: 10,
+			want:  5,
 		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got := fib(tt.input)
+			got := bitwiseComplement(tt.input)
 			require.Equal(t, tt.want, got)
 		})
 	}

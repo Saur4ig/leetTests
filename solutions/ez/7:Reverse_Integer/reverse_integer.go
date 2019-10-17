@@ -1,12 +1,9 @@
-package numbers
+package __Reverse_Integer
 
 import (
 	"math"
 )
 
-// 7. Reverse Integer
-// Given a 32-bit signed integer, reverse digits of an integer.
-// link - https://leetcode.com/problems/reverse-integer/
 func reverse(x int) int {
 	var (
 		res int
