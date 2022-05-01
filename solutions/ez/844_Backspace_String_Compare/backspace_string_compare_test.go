@@ -2,8 +2,6 @@ package _44_Backspace_String_Compare
 
 import (
 	"testing"
-
-	"github.com/stretchr/testify/require"
 )
 
 func TestBackspaceCompare(t *testing.T) {
@@ -40,8 +38,9 @@ func TestBackspaceCompare(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got := backspaceCompare(tt.input1, tt.input2)
-			require.Equal(t, tt.want, got)
+			if got := backspaceCompare2(tt.input1, tt.input2); got != tt.want {
+				t.Errorf("backspaceCompare() = %v, want %v", got, tt.want)
+			}
 		})
 	}
 }
