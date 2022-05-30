@@ -13,12 +13,8 @@ func divide(dividend int, divisor int) int {
 	if !(divisor > 0 && dividend > 0) && !(divisor < 0 && dividend < 0) {
 		sign = -1
 	}
-	if divisor < 0 {
-		divisor *= -1
-	}
-	if dividend < 0 {
-		dividend *= -1
-	}
+	divisor = abs(divisor)
+	dividend = abs(dividend)
 
 	if divisor == 1 {
 		return res(dividend, sign)
@@ -45,4 +41,11 @@ func res(a, sign int) int {
 	}
 
 	return a * sign
+}
+
+func abs(a int) int {
+	if a >= 0 {
+		return a
+	}
+	return -a
 }
